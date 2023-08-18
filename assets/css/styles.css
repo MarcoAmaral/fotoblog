@@ -56,6 +56,16 @@ nav ul {
 	gap: 7.2rem;
 }
 
+header {
+	animation: move 0.4s;
+}
+
+@keyframes move {
+	from {
+		transform: translateY(-100%);
+	}
+}
+
 header form {
 	flex: 1;
 }
@@ -128,8 +138,8 @@ main h1 {
 
 .item img {
 	width: 100%;
-	aspect-ratio: 16/9;
 	object-fit: cover;
+	aspect-ratio: 16/9;
 
 	transition: all 200ms ease-out;
 
@@ -172,19 +182,13 @@ footer p {
 	font-weight: 600;
 }
 
-header {
-	--startY: -100%;
-	animation: move 0.2s;
-}
-
 footer {
-	--startY: 100%;
-	animation: move 0.2s;
+	animation: f 0.4s;
 }
 
-@keyframes move {
+@keyframes f {
 	from {
-		transform: translateY(--startY);
+		transform: translateY(100%);
 	}
 }
 
